@@ -1,0 +1,58 @@
+{
+  "applications": ["yosurvey"],
+  "changelogDate": "20240507131500",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityPackage": "survey",
+  "entityTableName": "employee_survey",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Id"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Mã nhân viên"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Tên nhân viên"
+    },
+    {
+      "fieldName": "surveyId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Mã khảo sát gốc"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "SurveyStatusEnum",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "NOT_ATTENDED,COMPLETED",
+      "javadoc": "Trạng thái"
+    }
+  ],
+  "fluentMethods": true,
+  "incrementalChangelog": true,
+  "javadoc": "Bài khảo sát cho nhân viên",
+  "jpaMetamodelFiltering": false,
+  "name": "EmployeeSurvey",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "survey",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "rootId",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass",
+  "skipFakeData": true
+}

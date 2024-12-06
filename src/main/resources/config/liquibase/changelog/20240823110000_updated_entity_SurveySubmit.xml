@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added columns to the entity Kpi.
+    -->
+    <changeSet id="20240817163300-1" author="jhipster">
+        <addColumn tableName="survey_submit">
+            <column name="target" type="varchar(255)" remarks="Đối tượng đánh giá"/>
+        </addColumn>
+        <addColumn tableName="survey_submit">
+            <column name="target_name" type="varchar(255)" remarks="Tên đối tượng đánh giá"/>
+        </addColumn>
+        <createIndex tableName="survey_submit" indexName="idx_survey_submit_target">
+            <column name="target"/>
+        </createIndex>
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+</databaseChangeLog>

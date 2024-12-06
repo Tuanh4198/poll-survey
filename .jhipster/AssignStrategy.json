@@ -1,0 +1,33 @@
+{
+  "applications": ["yosurvey"],
+  "changelogDate": "20240507131500",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityPackage": "survey",
+  "entityTableName": "assign_strategy",
+  "fields": [
+    {
+      "fieldName": "surveyId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Id bài khảo sát"
+    }
+  ],
+  "fluentMethods": true,
+  "incrementalChangelog": true,
+  "javadoc": "Cặp đối tượng khảo sát",
+  "jpaMetamodelFiltering": false,
+  "name": "AssignStrategy",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "survey",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "surveyId",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass",
+  "skipFakeData": true
+}

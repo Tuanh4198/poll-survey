@@ -1,0 +1,32 @@
+{
+  "applications": ["yosurvey"],
+  "changelogDate": "20240507131500",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityPackage": "survey",
+  "entityTableName": "logics",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Id"
+    },
+    {
+      "fieldName": "componentName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Tên component"
+    }
+  ],
+  "fluentMethods": true,
+  "incrementalChangelog": true,
+  "javadoc": "Logic",
+  "jpaMetamodelFiltering": false,
+  "name": "Logics",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipFakeData": true
+}

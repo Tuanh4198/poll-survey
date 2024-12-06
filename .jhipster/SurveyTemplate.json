@@ -1,0 +1,47 @@
+{
+  "applications": ["yosurvey"],
+  "changelogDate": "20240507131500",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityPackage": "survey",
+  "entityTableName": "survey_template",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Id"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Tiêu đề"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "javadoc": "Mô tả"
+    },
+    {
+      "fieldName": "thumbUrl",
+      "fieldType": "String",
+      "javadoc": "Ảnh bìa"
+    },
+    {
+      "fieldName": "usedTime",
+      "fieldType": "Long",
+      "javadoc": "Số lượt sử dụng"
+    }
+  ],
+  "fluentMethods": true,
+  "incrementalChangelog": true,
+  "javadoc": "Mẫu khảo sát",
+  "jpaMetamodelFiltering": false,
+  "name": "SurveyTemplate",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass",
+  "skipFakeData": true
+}

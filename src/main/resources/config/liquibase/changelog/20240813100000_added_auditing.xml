@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added columns to the entity Training.
+    -->
+    <changeSet id="20240813100000-1-added-auditing" author="jhipster">
+        <addColumn tableName="survey">
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+        <dropDefaultValue tableName="survey" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="survey" columnName="updated_at" columnDataType="datetime"/>
+        <addColumn tableName="assign_strategy">
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+        <dropDefaultValue tableName="assign_strategy" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="assign_strategy" columnName="updated_at" columnDataType="datetime"/>
+        <addColumn tableName="block">
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+        <dropDefaultValue tableName="block" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="block" columnName="updated_at" columnDataType="datetime"/>
+        <addColumn tableName="block_fields">
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+        <dropDefaultValue tableName="block_fields" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="block_fields" columnName="updated_at" columnDataType="datetime"/>
+        <addColumn tableName="survey_submit">
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+        <dropDefaultValue tableName="survey_submit" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="survey_submit" columnName="updated_at" columnDataType="datetime"/>
+        <addColumn tableName="survey_template">
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+        <dropDefaultValue tableName="survey_template" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="survey_template" columnName="updated_at" columnDataType="datetime"/>
+        <addColumn tableName="logics">
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+        </addColumn>
+        <dropDefaultValue tableName="logics" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="logics" columnName="updated_at" columnDataType="datetime"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+</databaseChangeLog>

@@ -1,0 +1,35 @@
+{
+  "yosurveyApp": {
+    "employeeSurvey": {
+      "home": {
+        "title": "Employee Surveys",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Employee Survey",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Employee Survey",
+        "notFound": "No Employee Surveys found"
+      },
+      "created": "Một Employee Survey mới được tạo với định danh {{ param }}",
+      "updated": "Một Employee Survey cập nhật với định danh {{ param }}",
+      "deleted": "Một Employee Survey đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Employee Survey {{ id }}?"
+      },
+      "detail": {
+        "title": "Employee Survey"
+      },
+      "id": "Id",
+      "code": "Code",
+      "name": "Name",
+      "surveyId": "Survey Id",
+      "status": "Status",
+      "rootId": "Root Id",
+      "help": {
+        "id": "Id",
+        "code": "Mã nhân viên",
+        "name": "Tên nhân viên",
+        "surveyId": "Mã khảo sát gốc",
+        "status": "Trạng thái"
+      }
+    }
+  }
+}

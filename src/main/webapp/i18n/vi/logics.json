@@ -1,0 +1,28 @@
+{
+  "yosurveyApp": {
+    "logics": {
+      "home": {
+        "title": "Logics",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Logics",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Logics",
+        "notFound": "No Logics found"
+      },
+      "created": "Một Logics mới được tạo với định danh {{ param }}",
+      "updated": "Một Logics cập nhật với định danh {{ param }}",
+      "deleted": "Một Logics đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Logics {{ id }}?"
+      },
+      "detail": {
+        "title": "Logics"
+      },
+      "id": "Id",
+      "componentName": "Component Name",
+      "help": {
+        "id": "Id",
+        "componentName": "Tên component"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import './interFont.scss';
+
+html,
+body {
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+a {
+  color: #2a2a86;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif !important;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:after,
+  &::before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,9 @@
+${AnsiColor.BRIGHT_WHITE}                                  "-._
+${AnsiColor.BRIGHT_WHITE}        ______________________---"__,-'___   _________________________________________________   _________________________
+${AnsiColor.BRIGHT_WHITE}    _,-'/| #### | |              ####     | |  _   _____________________________________   _  | |  _    ____________________
+${AnsiColor.BRIGHT_WHITE} _-'            | |                       | | |O| |____||____||____||_____||_____||_____| |O| | | |O| |____||____||____||_____
+${AnsiColor.BRIGHT_WHITE}(_---------------------${AnsiColor.GREEN}nentangso.org${AnsiColor.BRIGHT_WHITE}------| | |_| -----${AnsiColor.BRIGHT_BLUE}yosurvey${AnsiColor.BRIGHT_WHITE}-------------------------- |_| | | |_| -----${AnsiColor.GREEN}High Speed${AnsiColor.BRIGHT_WHITE}-----------
+${AnsiColor.BRIGHT_WHITE} \------(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})~~~~(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})------------(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})~~~~(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})--' `---(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})~~~(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})--------------------------(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})~~~(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})--' `---(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})~~~(${AnsiColor.GREEN}o${AnsiColor.BRIGHT_WHITE})---------------------
+
+${AnsiColor.BRIGHT_BLUE}:: Nen Tang So 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: https://nentangso.org ::${AnsiColor.DEFAULT}

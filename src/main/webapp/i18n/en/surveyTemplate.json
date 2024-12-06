@@ -1,0 +1,34 @@
+{
+  "yosurveyApp": {
+    "surveyTemplate": {
+      "home": {
+        "title": "Survey Templates",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Survey Template",
+        "createOrEditLabel": "Create or edit a Survey Template",
+        "notFound": "No Survey Templates found"
+      },
+      "created": "A new Survey Template is created with identifier {{ param }}",
+      "updated": "A Survey Template is updated with identifier {{ param }}",
+      "deleted": "A Survey Template is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Survey Template {{ id }}?"
+      },
+      "detail": {
+        "title": "Survey Template"
+      },
+      "id": "Id",
+      "title": "Title",
+      "description": "Description",
+      "thumbUrl": "Thumb Url",
+      "usedTime": "Used Time",
+      "help": {
+        "id": "Id",
+        "title": "Tiêu đề",
+        "description": "Mô tả",
+        "thumbUrl": "Ảnh bìa",
+        "usedTime": "Số lượt sử dụng"
+      }
+    }
+  }
+}

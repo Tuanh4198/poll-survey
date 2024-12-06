@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Survey.
+    -->
+    <changeSet id="20240507131500-1" author="jhipster">
+        <createTable tableName="survey" remarks="Bài khảo sát">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="varchar(255)" remarks="Tiêu đề">
+                <constraints nullable="false" />
+            </column>
+            <column name="description" type="varchar(255)" remarks="Mô tả">
+                <constraints nullable="true" />
+            </column>
+            <column name="thumb_url" type="varchar(255)" remarks="Ảnh bìa">
+                <constraints nullable="false" />
+            </column>
+            <column name="apply_time" type="${datetimeType}" remarks="Ngày bắt đầu">
+                <constraints nullable="false" />
+            </column>
+            <column name="end_time" type="${datetimeType}" remarks="Ngày kết thúc">
+                <constraints nullable="true" />
+            </column>
+            <column name="is_required" type="boolean" remarks="Bắt buộc hoàn thành">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="survey" columnName="apply_time" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="survey" columnName="end_time" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+</databaseChangeLog>

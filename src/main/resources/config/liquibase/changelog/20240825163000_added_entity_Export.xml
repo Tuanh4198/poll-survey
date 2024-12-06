@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity AssignStrategy.
+    -->
+    <changeSet id="20240825163000-1" author="jhipster">
+        <createTable tableName="exports" remarks="Tiến trình xuất excel">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="checksum" type="varchar(255)" remarks="Mã tiến trình"/>
+            <column name="user_code" type="varchar(255)" remarks="Mã nhân viên"/>
+            <column name="component" type="varchar(255)" remarks="Đối tượng xuất"/>
+            <column name="conditions" type="varchar(5000)" remarks="Điều kiện xuất"/>
+            <column name="url" type="varchar(5000)" remarks="Link tải file"/>
+            <column name="total" type="bigint" remarks="Tổng số record"/>
+            <column name="current" type="bigint" remarks="Số record đã xuất"/>
+            <column name="status" type="varchar(255)" remarks="Trạng thái"/>
+            <column name="reason" type="varchar(5000)" remarks="Thông báo"/>
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+    <changeSet id="20240825163000-2" author="jhipster">
+        <createIndex tableName="exports" indexName="idx_checksum">
+            <column name="checksum"/>
+        </createIndex>
+        <createIndex tableName="exports" indexName="idx_user_code">
+            <column name="user_code"/>
+        </createIndex>
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+</databaseChangeLog>

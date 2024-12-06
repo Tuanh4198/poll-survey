@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="floatType" value="float4" dbms="postgresql"/>
+    <property name="clobType" value="longvarchar" dbms="postgresql"/>
+    <property name="blobType" value="bytea" dbms="postgresql"/>
+    <property name="uuidType" value="uuid" dbms="postgresql"/>
+    <property name="datetimeType" value="datetime" dbms="postgresql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/00000000000001_initial_nts_helper.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_Survey.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_SurveyTemplate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_AssignStrategy.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_Block.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_BlockFields.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_EmployeeSurvey.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_SurveySubmit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_Logics.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20240507131500_added_entity_constraints_AssignStrategy.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_constraints_Block.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_constraints_BlockFields.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_constraints_EmployeeSurvey.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240507131500_added_entity_constraints_SurveySubmit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240813100000_added_auditing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240815051400_added_entity_Template.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240816110000_updated_entity_Survey.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240816111500_updated_indexes.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240816112000_added_entity_ShedLock.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240817100000_updated_entity_EmployeeSurvey.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240817130000_updated_entity_EmployeeSurvey.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240817150000_updated_auditing.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240817163300_updated_entity_SurveySubmit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240823110000_updated_entity_SurveySubmit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240825163000_added_entity_Export.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240830130000_updated_entity_Survey.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

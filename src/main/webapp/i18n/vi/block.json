@@ -1,0 +1,37 @@
+{
+  "yosurveyApp": {
+    "block": {
+      "home": {
+        "title": "Blocks",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Block",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Block",
+        "notFound": "No Blocks found"
+      },
+      "created": "Một Block mới được tạo với định danh {{ param }}",
+      "updated": "Một Block cập nhật với định danh {{ param }}",
+      "deleted": "Một Block đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Block {{ id }}?"
+      },
+      "detail": {
+        "title": "Block"
+      },
+      "id": "Id",
+      "type": "Type",
+      "surveyId": "Survey Id",
+      "pageNum": "Page Num",
+      "num": "Num",
+      "id": "Id",
+      "id": "Id",
+      "surveyId": "Survey Id",
+      "help": {
+        "id": "Id",
+        "type": "Loại component",
+        "surveyId": "Id survey gốc",
+        "pageNum": "Trang",
+        "num": "Thứ tự"
+      }
+    }
+  }
+}

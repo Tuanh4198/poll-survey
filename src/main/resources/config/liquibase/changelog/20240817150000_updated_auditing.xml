@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added columns to the entity Training.
+    -->
+    <changeSet id="20240817150000-1-updated-auditing" author="jhipster">
+        <addColumn tableName="employee_survey">
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+            </column>
+        </addColumn>
+        <dropDefaultValue tableName="employee_survey" columnName="created_at" columnDataType="datetime"/>
+        <dropDefaultValue tableName="employee_survey" columnName="updated_at" columnDataType="datetime"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+</databaseChangeLog>

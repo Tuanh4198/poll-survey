@@ -1,0 +1,94 @@
+{
+  "applications": ["yosurvey"],
+  "changelogDate": "20240507131500",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityPackage": "survey",
+  "entityTableName": "survey_submit",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Id"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Mã nhân viên"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Tên nhân viên"
+    },
+    {
+      "fieldName": "surveyId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Mã bài khảo sát gốc"
+    },
+    {
+      "fieldName": "blockId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Mã block"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ComponentTypeEnum",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "MULTIPLE_CHOICE,ESSAY,STAR,POINT_SCALE,TITLE",
+      "javadoc": "Loại block"
+    },
+    {
+      "fieldName": "fieldId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Mã field"
+    },
+    {
+      "fieldName": "fieldName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Tên field"
+    },
+    {
+      "fieldName": "fieldValue",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Giá trị submit"
+    }
+  ],
+  "fluentMethods": true,
+  "incrementalChangelog": true,
+  "javadoc": "Kết quả submit",
+  "jpaMetamodelFiltering": false,
+  "name": "SurveySubmit",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "blockFields",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "fieldId",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "block",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "blockId",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "survey",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "surveyId",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass",
+  "skipFakeData": true
+}

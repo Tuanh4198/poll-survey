@@ -1,0 +1,85 @@
+{
+  "applications": ["yosurvey"],
+  "changelogDate": "20240507131500",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityPackage": "survey",
+  "entityTableName": "survey",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Tiêu đề"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "javadoc": "Mô tả"
+    },
+    {
+      "fieldName": "thumbUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Ảnh bìa"
+    },
+    {
+      "fieldName": "applyTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Ngày bắt đầu"
+    },
+    {
+      "fieldName": "endTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Ngày kết thúc"
+    },
+    {
+      "fieldName": "isRequired",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Bắt buộc hoàn thành"
+    }
+  ],
+  "fluentMethods": true,
+  "incrementalChangelog": true,
+  "javadoc": "Bài khảo sát",
+  "jpaMetamodelFiltering": false,
+  "name": "Survey",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "assignStrategy",
+      "otherEntityRelationshipName": "surveyId",
+      "relationshipName": "id",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "employeeSurvey",
+      "otherEntityRelationshipName": "rootId",
+      "relationshipName": "id",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "block",
+      "otherEntityRelationshipName": "surveyId",
+      "relationshipName": "id",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "surveySubmit",
+      "otherEntityRelationshipName": "surveyId",
+      "relationshipName": "id",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass",
+  "skipFakeData": true
+}

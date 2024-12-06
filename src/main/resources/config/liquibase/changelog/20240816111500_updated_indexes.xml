@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <!--
+        Added columns to the entity Training.
+    -->
+    <changeSet id="20240816111500-1" author="jhipster">
+        <createIndex tableName="survey" indexName="idx_survey_title">
+            <column name="title"/>
+        </createIndex>
+        <createIndex tableName="survey" indexName="idx_survey_apply_time">
+            <column name="apply_time"/>
+        </createIndex>
+        <createIndex tableName="survey" indexName="idx_survey_end_time">
+            <column name="end_time"/>
+        </createIndex>
+        <createIndex tableName="survey_submit" indexName="idx_survey_submit_code">
+            <column name="code"/>
+        </createIndex>
+        <createIndex tableName="survey_submit" indexName="idx_survey_submit_survey_id">
+            <column name="survey_id"/>
+        </createIndex>
+        <createIndex tableName="survey_submit" indexName="idx_survey_submit_block_id">
+            <column name="block_id"/>
+        </createIndex>
+        <createIndex tableName="survey_template" indexName="idx_survey_template_title">
+            <column name="title"/>
+        </createIndex>
+        <createIndex tableName="employee_survey" indexName="idx_employee_survey_code">
+            <column name="code"/>
+        </createIndex>
+        <createIndex tableName="employee_survey" indexName="idx_employee_survey_survey_id">
+            <column name="survey_id"/>
+        </createIndex>
+        <createIndex tableName="block" indexName="idx_block_survey_id">
+            <column name="survey_id"/>
+        </createIndex>
+        <createIndex tableName="block_fields" indexName="idx_block_fields_survey_id">
+            <column name="survey_id"/>
+        </createIndex>
+        <createIndex tableName="block_fields" indexName="idx_block_fields_block_id">
+            <column name="block_id"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

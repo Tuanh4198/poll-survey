@@ -1,0 +1,41 @@
+{
+  "yosurveyApp": {
+    "survey": {
+      "home": {
+        "title": "Surveys",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Survey",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Survey",
+        "notFound": "No Surveys found"
+      },
+      "created": "Một Survey mới được tạo với định danh {{ param }}",
+      "updated": "Một Survey cập nhật với định danh {{ param }}",
+      "deleted": "Một Survey đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Survey {{ id }}?"
+      },
+      "detail": {
+        "title": "Survey"
+      },
+      "id": "Id",
+      "title": "Title",
+      "description": "Description",
+      "thumbUrl": "Thumb Url",
+      "applyTime": "Apply Time",
+      "endTime": "End Time",
+      "isRequired": "Is Required",
+      "id": "Id",
+      "id": "Id",
+      "id": "Id",
+      "id": "Id",
+      "help": {
+        "title": "Tiêu đề",
+        "description": "Mô tả",
+        "thumbUrl": "Ảnh bìa",
+        "applyTime": "Ngày bắt đầu",
+        "endTime": "Ngày kết thúc",
+        "isRequired": "Bắt buộc hoàn thành"
+      }
+    }
+  }
+}

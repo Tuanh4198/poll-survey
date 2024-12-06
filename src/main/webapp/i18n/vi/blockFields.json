@@ -1,0 +1,38 @@
+{
+  "yosurveyApp": {
+    "blockFields": {
+      "home": {
+        "title": "Block Fields",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Block Fields",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Block Fields",
+        "notFound": "No Block Fields found"
+      },
+      "created": "Một Block Fields mới được tạo với định danh {{ param }}",
+      "updated": "Một Block Fields cập nhật với định danh {{ param }}",
+      "deleted": "Một Block Fields đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Block Fields {{ id }}?"
+      },
+      "detail": {
+        "title": "Block Fields"
+      },
+      "id": "Id",
+      "blockId": "Block Id",
+      "surveyId": "Survey Id",
+      "fieldName": "Field Name",
+      "fieldValue": "Field Value",
+      "type": "Type",
+      "id": "Id",
+      "blockId": "Block Id",
+      "help": {
+        "id": "Id",
+        "blockId": "Id Block gốc",
+        "surveyId": "Id Survey gốc",
+        "fieldName": "fieldName",
+        "fieldValue": "fieldValue",
+        "type": "Loại field"
+      }
+    }
+  }
+}

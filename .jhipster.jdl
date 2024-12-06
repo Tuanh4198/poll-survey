@@ -1,0 +1,273 @@
+application {
+    config {
+        applicationType monolith
+        authenticationType oauth2
+        baseName yosurvey
+        blueprints []
+        buildTool maven
+        cacheProvider redis
+        clientFramework react
+        clientPackageManager npm
+        clientTheme none
+        creationTimestamp 1720159113000
+        databaseType sql
+        devDatabaseType postgresql
+        entitySuffix Entity
+        dtoSuffix DTO
+        enableGradleEnterprise false
+        enableHibernateCache true
+        enableSwaggerCodegen false
+        enableTranslation true
+        gradleEnterpriseHost ""
+        jhiPrefix nts
+        jhipsterVersion "7.9.3"
+        languages [vi, en]
+        messageBroker false
+        microfrontend false
+        microfrontends []
+        nativeLanguage vi
+        otherModules []
+        packageName io.yody.yosurvey
+        prodDatabaseType postgresql
+        reactive false
+        searchEngine false
+        serverPort 8080
+        serviceDiscoveryType no
+        skipClient false
+        skipUserManagement true
+        testFrameworks []
+        websocket false
+        withAdminUi false
+    }
+
+    entities *
+    dto * with mapstruct
+    service * with serviceClass
+    paginate * with pagination
+}
+
+/** Bài khảo sát */
+@entityPackage(survey)
+@skipFakeData
+@changelogDate(20240507131500)
+entity Survey {
+	id Long required
+	/** Tiêu đề */
+	title String required
+    /** Mô tả */
+    description String
+    /** Ảnh bìa */
+    thumbUrl String required
+    /** Ngày bắt đầu */
+    applyTime Instant required
+    /** Ngày kết thúc */
+    endTime Instant required
+    /** Bắt buộc hoàn thành */
+    isRequired Boolean required
+	/*
+    * metafields
+    * Danh sách trường hợp khảo sát
+    * events: {key: 'event', value: <event>}
+    * hidden_fields: {key: 'hidden_field', value: <defaultValue>}
+    */
+}
+
+/** Mẫu khảo sát */
+@entityPackage(survey)
+@skipFakeData
+@changelogDate(20240507131500)
+entity SurveyTemplate {
+	/** Id */
+	id Long required
+    /** Tiêu đề */
+    title String required
+    /** Mô tả */
+    description String
+    /** Ảnh bìa */
+    thumbUrl String
+    /** Số lượt sử dụng */
+    usedTime Long
+}
+
+/** Cặp đối tượng khảo sát */
+@entityPackage(survey)
+@skipFakeData
+@changelogDate(20240507131500)
+entity AssignStrategy {
+	/** Id bài khảo sát */
+	surveyId Long required
+    /*
+    * metafields
+    * Danh sách trường hợp khảo sát
+    * participants: {key: 'participants', value: <ListParticipant>, type: ParticipantTypeEnum}
+    * targets: {key: 'targets', value: <ListTarget>, type: TargetTypeEnum }
+    */
+}
+
+/** Block khảo sát */
+@entityPackage(survey)
+@skipFakeData
+@changelogDate(20240507131500)
+entity Block {
+	/** Id */
+	id Long required
+    /** Loại component */
+	type ComponentTypeEnum required
+  	/** Id survey gốc */
+    surveyId Long required
+    /** Trang */
+    pageNum Long required
+    /** Thứ tự */
+    num Long required
+    /*
+    * metafields
+    * Bắt buộc trả lời {key: 'required', value: true | false }
+    */
+}
+
+/** Các trường trong block khảo sát */
+@entityPackage(survey)
+@skipFakeData
+@changelogDate(20240507131500)
+entity BlockFields {
+	/** Id */
+    id Long required
+    /** Id Block gốc */
+    blockId Long required
+    /** Id Survey gốc */
+    surveyId Long required
+    /** fieldName */
+    fieldName String required
+    /** fieldValue */
+    fieldValue String required
+    /** Loại field */
+	type FieldTypeEnum required
+    /*
+    * metafields
+    * Format: {key: 'format', value: FormatType}
+    */
+}
+
+/** Bài khảo sát cho nhân viên */
+@entityPackage(survey)
+@skipFakeData
+@changelogDate(20240507131500)
+entity EmployeeSurvey {
+	/** Id */
+	id Long required
+    /** Mã nhân viên */
+    code String required
+    /** Tên nhân viên */
+    name String required
+    /** Mã khảo sát gốc */
+    surveyId Long required
+    /** Trạng thái */
+    status SurveyStatusEnum required
+}
+
+/** Kết quả submit */
+@entityPackage(survey)
+@skipFakeData
+@changelogDate(20240507131500)
+entity SurveySubmit {
+	/** Id */
+    id Long required
+    /** Mã nhân viên */
+    code String required
+    /** Tên nhân viên */
+    name String required
+    /** Mã bài khảo sát gốc */
+    surveyId Long required
+    /** Mã block */
+    blockId Long required
+    /** Loại block */
+    type ComponentTypeEnum required
+    /** Mã field */
+    fieldId Long required
+    /** Tên field */
+    fieldName String required
+    /** Giá trị submit */
+    fieldValue String required
+}
+
+/** Logic */
+@entityPackage(survey)
+@skipFakeData
+@changelogDate(20240507131500)
+entity Logics {
+	/** Id */
+    id Long required
+    /** Tên component */
+    componentName String required
+}
+
+enum FieldTypeEnum {
+	MULTIPLE_CHOICE_OPTION,
+    DATE_INPUT,
+    TEXT_INPUT,
+    NUMBER_INPUT,
+    STAR,
+    POINT_SCALE_OPTION,
+    TEXT
+}
+
+enum ComponentTypeEnum {
+	MULTIPLE_CHOICE,
+    ESSAY,
+    STAR,
+    POINT_SCALE,
+    TITLE
+}
+
+enum SurveyStatusEnum {
+	NOT_ATTENDED
+	COMPLETED
+}
+
+enum TargetTypeEnum {
+	/** Khảo sát phòng ban */
+	DEPARTMENT
+    /** Khảo sát nhân sự  */
+    EMPLOYEE
+    /** Khảo sát khác */
+    OTHER
+}
+
+enum ParticipantTypeEnum {
+	/** Nhân sự cùng phòng ban */
+    EMPLOYEE_SAME_DEPARTMENT
+    /** Quản lý trực tiếp theo phòng ban */
+    DEPARTMENT_MANAGER
+    /** Nhân sự cùng cấp cùng phòng ban */
+    EMPLOYEE_SAME_LEVEL_SAME_DEPARTMENT
+    /** Nhân sự cấp dưới cùng phòng ban */
+    EMPLOYEE_LOWER_LEVEL_SAME_DEPARTMENT
+    /** Tự đánh giá */
+    SELF
+    /** Danh sách nhân sự cụ thể */
+    SPEC_USERS
+    /** Bất kỳ ai */
+    ANY_USERS
+}
+
+relationship OneToMany {
+	Survey{id} to AssignStrategy{surveyId}
+}
+
+relationship OneToMany {
+	Survey{id} to EmployeeSurvey{rootId}
+}
+
+relationship OneToMany {
+	Survey{id} to Block{surveyId}
+}
+
+relationship OneToMany {
+	Block{id} to BlockFields{blockId}
+}
+
+relationship OneToMany {
+	BlockFields{id} to SurveySubmit{fieldId}
+    Block{id} to SurveySubmit{blockId}
+    Survey{id} to SurveySubmit{surveyId}
+}

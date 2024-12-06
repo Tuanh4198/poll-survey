@@ -1,0 +1,70 @@
+{
+  "applications": ["yosurvey"],
+  "changelogDate": "20240507131500",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityPackage": "survey",
+  "entityTableName": "block_fields",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Id"
+    },
+    {
+      "fieldName": "blockId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Id Block gốc"
+    },
+    {
+      "fieldName": "surveyId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Id Survey gốc"
+    },
+    {
+      "fieldName": "fieldName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "fieldName"
+    },
+    {
+      "fieldName": "fieldValue",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "fieldValue"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "FieldTypeEnum",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "MULTIPLE_CHOICE_OPTION,DATE_INPUT,TEXT_INPUT,NUMBER_INPUT,STAR,POINT_SCALE_OPTION,TEXT",
+      "javadoc": "Loại field"
+    }
+  ],
+  "fluentMethods": true,
+  "incrementalChangelog": true,
+  "javadoc": "Các trường trong block khảo sát",
+  "jpaMetamodelFiltering": false,
+  "name": "BlockFields",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "surveySubmit",
+      "otherEntityRelationshipName": "fieldId",
+      "relationshipName": "id",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "block",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "blockId",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass",
+  "skipFakeData": true
+}

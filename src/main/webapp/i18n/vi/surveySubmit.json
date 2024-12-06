@@ -1,0 +1,45 @@
+{
+  "yosurveyApp": {
+    "surveySubmit": {
+      "home": {
+        "title": "Survey Submits",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Survey Submit",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Survey Submit",
+        "notFound": "No Survey Submits found"
+      },
+      "created": "Một Survey Submit mới được tạo với định danh {{ param }}",
+      "updated": "Một Survey Submit cập nhật với định danh {{ param }}",
+      "deleted": "Một Survey Submit đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Survey Submit {{ id }}?"
+      },
+      "detail": {
+        "title": "Survey Submit"
+      },
+      "id": "Id",
+      "code": "Code",
+      "name": "Name",
+      "surveyId": "Survey Id",
+      "blockId": "Block Id",
+      "type": "Type",
+      "fieldId": "Field Id",
+      "fieldName": "Field Name",
+      "fieldValue": "Field Value",
+      "fieldId": "Field Id",
+      "blockId": "Block Id",
+      "surveyId": "Survey Id",
+      "help": {
+        "id": "Id",
+        "code": "Mã nhân viên",
+        "name": "Tên nhân viên",
+        "surveyId": "Mã bài khảo sát gốc",
+        "blockId": "Mã block",
+        "type": "Loại block",
+        "fieldId": "Mã field",
+        "fieldName": "Tên field",
+        "fieldValue": "Giá trị submit"
+      }
+    }
+  }
+}

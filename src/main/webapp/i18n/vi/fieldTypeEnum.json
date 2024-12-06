@@ -1,0 +1,14 @@
+{
+  "yosurveyApp": {
+    "FieldTypeEnum": {
+      "null": "",
+      "MULTIPLE_CHOICE_OPTION": "MULTIPLE_CHOICE_OPTION",
+      "DATE_INPUT": "DATE_INPUT",
+      "TEXT_INPUT": "TEXT_INPUT",
+      "NUMBER_INPUT": "NUMBER_INPUT",
+      "STAR": "STAR",
+      "POINT_SCALE_OPTION": "POINT_SCALE_OPTION",
+      "TEXT": "TEXT"
+    }
+  }
+}

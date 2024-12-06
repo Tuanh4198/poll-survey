@@ -1,0 +1,28 @@
+{
+  "yosurveyApp": {
+    "assignStrategy": {
+      "home": {
+        "title": "Assign Strategies",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Assign Strategy",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Assign Strategy",
+        "notFound": "No Assign Strategies found"
+      },
+      "created": "Một Assign Strategy mới được tạo với định danh {{ param }}",
+      "updated": "Một Assign Strategy cập nhật với định danh {{ param }}",
+      "deleted": "Một Assign Strategy đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Assign Strategy {{ id }}?"
+      },
+      "detail": {
+        "title": "Assign Strategy"
+      },
+      "id": "ID",
+      "surveyId": "Survey Id",
+      "surveyId": "Survey Id",
+      "help": {
+        "surveyId": "Id bài khảo sát"
+      }
+    }
+  }
+}

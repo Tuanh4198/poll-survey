@@ -1,0 +1,9 @@
+{
+  "yosurveyApp": {
+    "SurveyStatusEnum": {
+      "null": "",
+      "NOT_ATTENDED": "NOT_ATTENDED",
+      "COMPLETED": "COMPLETED"
+    }
+  }
+}

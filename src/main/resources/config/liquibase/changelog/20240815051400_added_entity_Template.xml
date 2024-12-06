@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Block.
+    -->
+    <changeSet id="20240507131500-1" author="jhipster">
+        <createTable tableName="block_template" remarks="Block template khảo sát">
+            <column name="id" type="bigint" remarks="Id">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="type" type="varchar(255)" remarks="Loại component">
+                <constraints nullable="false" />
+            </column>
+            <column name="survey_id" type="bigint" remarks="Id survey template gốc">
+                <constraints nullable="false" />
+            </column>
+            <column name="page_num" type="bigint" remarks="Trang">
+                <constraints nullable="false" />
+            </column>
+            <column name="num" type="bigint" remarks="Thứ tự">
+                <constraints nullable="false" />
+            </column>
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <createTable tableName="block_fields_template" remarks="Các trường trong block template khảo sát">
+            <column name="id" type="bigint" remarks="Id">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="block_id" type="bigint" remarks="Id Block template gốc">
+                <constraints nullable="false" />
+            </column>
+            <column name="survey_id" type="bigint" remarks="Id Survey template gốc">
+                <constraints nullable="false" />
+            </column>
+            <column name="field_name" type="varchar(255)" remarks="fieldName">
+                <constraints nullable="false" />
+            </column>
+            <column name="field_value" type="varchar(255)" remarks="fieldValue">
+                <constraints nullable="false" />
+            </column>
+            <column name="type" type="varchar(255)" remarks="Loại field">
+                <constraints nullable="false" />
+            </column>
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <createTable tableName="assign_strategy_template" remarks="Cặp đối tượng khảo sát template">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="survey_id" type="bigint" remarks="Id bài khảo sát">
+                <constraints nullable="false" />
+            </column>
+            <column name="created_by" type="varchar(255)" remarks="Người tạo" defaultValue="system"/>
+            <column name="created_at" type="${datetimeType}" remarks="Ngày tạo" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_by" type="varchar(255)" remarks="Người cập nhật" defaultValue="system"/>
+            <column name="updated_at" type="${datetimeType}" remarks="Ngày cập nhật" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="deleted" type="boolean" remarks="Xóa">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+</databaseChangeLog>

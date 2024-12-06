@@ -1,0 +1,13 @@
+include:
+  - project: 'devops/gitlab-ci-template'
+    file: 'Docker.Jhipster.gitlab-ci.yml'
+  - project: 'devops/gitlab-ci-template'
+    file: 'Trigger.ArgoCD.gitlab-ci.yml'
+
+.gitlab-runner-overrides:
+  tags:
+    - docker-xlarge
+
+variables:
+  MAVEN_CLI_OPTS: '-s .m2/settings.xml --batch-mode -ntp'
+  QUALITY_CONTROL: 'DISABLED'
